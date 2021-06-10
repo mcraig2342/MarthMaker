@@ -24,10 +24,15 @@ class App extends Component {
   render () {
     return (
     <main className="App">
-      <TechArea techs={this.state.techs}/>
+      <TechArea techs={this.state.techs} playMovie={this.playMovie}/>
     </main>
   )
   }
+
+   playMovie = (event) => {
+    event.target.play();
+  }
+
 }
 
 
