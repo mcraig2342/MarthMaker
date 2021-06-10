@@ -9,14 +9,16 @@ class App extends Component {
   super()
     this.state = {
       tech: [],
+      error: '',
     }
 }
 
   componentDidMount = () => {
     fetchAllTech()
     .then(techData => {
-      console.log(techData)
+      this.setState({ tech: techData })
     })
+    .catch(error => this.setState({ error: 'Tech not found!'}))
   }
 
   render () {
