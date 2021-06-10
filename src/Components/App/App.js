@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
   super()
     this.state = {
-      tech: [],
+      techs: [],
       error: '',
     }
 }
@@ -16,7 +16,7 @@ class App extends Component {
   componentDidMount = () => {
     fetchAllTech()
     .then(techData => {
-      this.setState({ tech: techData })
+      this.setState({ techs: techData })
     })
     .catch(error => this.setState({ error: 'Tech not found!'}))
   }
@@ -24,7 +24,7 @@ class App extends Component {
   render () {
     return (
     <main className="App">
-      <TechArea />
+      <TechArea techs={this.state.techs}/>
     </main>
   )
   }
