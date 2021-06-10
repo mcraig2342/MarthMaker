@@ -3,12 +3,10 @@ import TechCard from '../TechCard/TechCard.js'
 import './TechArea.css'
 
 
-const TechArea = ({
-  techs
-}) => {
+const TechArea = ({ techs }) => {
   const techCards = techs.map(tech => {
-    return ( <
-      TechCard / >
+    return (
+      < TechCard />
     )
   })
 
