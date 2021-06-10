@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import { fetchAllTech } from '../../Utils/api-calls';
+import TechArea from '../TechArea/TechArea.js'
 
 class App extends Component {
 
