@@ -1,7 +1,8 @@
 import './App.css';
 import React, { Component } from 'react';
 import { fetchAllTech } from '../../Utils/api-calls';
-import TechArea from '../TechArea/TechArea.js'
+import TechArea from '../TechArea/TechArea.js';
+import { Route, Link } from 'react-router-dom';
 
 class App extends Component {
 
@@ -10,6 +11,7 @@ class App extends Component {
     this.state = {
       techs: [],
       error: '',
+      learningList: [],
     }
 }
 
@@ -24,7 +26,26 @@ class App extends Component {
   render () {
     return (
     <main className="App">
-      <TechArea techs={this.state.techs} playMovie={this.playMovie}/>
+    <Link to="/learning_list">
+      <h1>Learning List</h1>
+    </Link>
+    <Route exact path ='/'
+          render={() => (
+            <TechArea learningList={this.state.learningList}
+                      removeFromList={this.removeFromLearningList}
+                      addToList={this.addToLearningList}
+                      techs={this.state.techs}
+                      playMovie={this.playMovie}/>
+          )}
+        />
+    <Route exact path ='/learning_list'
+          render={() => (
+            <TechArea learningList={this.state.learningList}
+                      removeFromList={this.removeFromLearningList}
+                      techs={this.state.learningList}
+                      playMovie={this.playMovie}/>
+         )}
+        />
     </main>
   )
   }
@@ -32,6 +53,19 @@ class App extends Component {
    playMovie = (event) => {
     event.target.play();
   }
+
+  addToLearningList = (event) => {
+   const learningList = this.state.learningList
+   const techToAdd = this.state.techs.find( tech => tech.id === event.target.id)
+     if (!learningList.includes(techToAdd)) {
+      this.setState({learningList: [...learningList, techToAdd]})
+  }
+}
+
+removeFromLearningList = (event) => {
+   const filteredList = this.state.learningList.filter(tech => tech.id !== event.target.id);
+   this.setState({ learningList: filteredList });
+ }
 
 }
 
