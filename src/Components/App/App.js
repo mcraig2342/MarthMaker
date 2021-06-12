@@ -31,12 +31,19 @@ class App extends Component {
     </Link>
     <Route exact path ='/'
           render={() => (
-            <TechArea addToList={this.addToLearningList} techs={this.state.techs} playMovie={this.playMovie}/>
+            <TechArea learningList={this.state.learningList}
+                      removeFromList={this.removeFromLearningList}
+                      addToList={this.addToLearningList}
+                      techs={this.state.techs}
+                      playMovie={this.playMovie}/>
           )}
         />
     <Route exact path ='/learning_list'
           render={() => (
-            <TechArea techs={this.state.learningList} playMovie={this.playMovie}/>
+            <TechArea learningList={this.state.learningList}
+                      removeFromList={this.removeFromLearningList}
+                      techs={this.state.learningList}
+                      playMovie={this.playMovie}/>
          )}
         />
     </main>
