@@ -25,7 +25,7 @@ class App extends Component {
   render () {
     return (
     <main className="App">
-      <TechArea techs={this.state.techs} playMovie={this.playMovie}/>
+      <TechArea addToList={this.addToLearningList} techs={this.state.techs} playMovie={this.playMovie}/>
     </main>
   )
   }
