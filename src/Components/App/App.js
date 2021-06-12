@@ -1,7 +1,8 @@
 import './App.css';
 import React, { Component } from 'react';
 import { fetchAllTech } from '../../Utils/api-calls';
-import TechArea from '../TechArea/TechArea.js'
+import TechArea from '../TechArea/TechArea.js';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
 
@@ -25,7 +26,11 @@ class App extends Component {
   render () {
     return (
     <main className="App">
-      <TechArea addToList={this.addToLearningList} techs={this.state.techs} playMovie={this.playMovie}/>
+    <Route exact path ='/'
+          render={() => (
+            <TechArea addToList={this.addToLearningList} techs={this.state.techs} playMovie={this.playMovie}/>
+          )}
+        />
     </main>
   )
   }
