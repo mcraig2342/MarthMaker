@@ -62,6 +62,11 @@ class App extends Component {
   }
 }
 
+removeFromLearningList = (event) => {
+   const filteredList = this.state.learningList.filter(tech => tech.id !== event.target.id);
+   this.setState({ learningList: filteredList });
+ }
+
 }
 
 
