@@ -3,7 +3,7 @@ import TechCard from '../TechCard/TechCard.js'
 import './TechArea.css'
 
 
-const TechArea = ({ techs, playMovie }) => {
+const TechArea = ({ addToList, techs, playMovie }) => {
   const techCards = techs.map(tech => {
     if(tech.gifs.length) {
     return (
@@ -13,6 +13,7 @@ const TechArea = ({ techs, playMovie }) => {
       id={tech.id}
       key={tech.id}
       playMovie={playMovie}
+      addToList={addToList}
       />
     )
   }
