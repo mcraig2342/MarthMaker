@@ -36,9 +36,10 @@ class App extends Component {
 
   addToLearningList = (event) => {
    const learningList = this.state.learningList
-   const techToAdd = this.state.techs.find( tech => tech.id === parseInt(event.target.id))
+   const techToAdd = this.state.techs.find( tech => tech.id === event.target.id)
+    console.log(parseInt(event.target.id))
      if (!learningList.includes(techToAdd)) {
-      this.setState({readingList: [...learningList, techToAdd]})
+      this.setState({learningList: [...learningList, techToAdd]})
   }
 }
 
