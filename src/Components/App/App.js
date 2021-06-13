@@ -4,7 +4,7 @@ import { fetchAllTech } from '../../Utils/api-calls';
 import { filterTechData } from '../../Utils/cleaning-function';
 import TechArea from '../TechArea/TechArea.js';
 import Header from '../Header/Header.js'
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
 
