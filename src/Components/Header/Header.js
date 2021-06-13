@@ -1,19 +1,21 @@
 import React from 'react';
 import './Header.css';
 import logo from '../../Utils/logo.png'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
   return(
-    <nav>
+    <nav className='header'>
       <img className='logo' src={logo} alt='Marth maker logo'/>
-      <Link to="/learning_list">
-        <p>My Learning List</p>
-      </Link>
-      <Link to="/tech_list">
-        <p>Tech</p>
-      </Link>
+      <div className='link-container'>
+        <NavLink className='nav-link' to="/learning_list">
+          <p>LEARNING LIST</p>
+        </NavLink>
+        <NavLink className='nav-link' to="/tech_list">
+          <p>TECH</p>
+        </NavLink>
+      </div>
     </nav>
 
   )
