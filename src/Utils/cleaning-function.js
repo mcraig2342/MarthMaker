@@ -1,16 +1,15 @@
 const filterTechData = techData => {
-  const filteredTechData = techData.map(tech => {
-    if(tech.gifs.length){
+  const filteredTechData = techData.filter(tech => tech.gifs.length > 0);
+  const cleanedTechData = filteredTechData.map(techSkill => {
       return {
-        'description': tech.description,
-        'gifs': tech.gifs,
-        'id': tech.id,
-        'inputs': tech.inputs,
-        'tech': tech.tech,
+        'description': techSkill.description,
+        'gifs': techSkill.gifs,
+        'id': techSkill.id,
+        'inputs': techSkill.inputs,
+        'tech': techSkill.tech,
       }
-    }
   });
-  return filteredTechData;
+  return cleanedTechData
 }
 
 export { filterTechData };
