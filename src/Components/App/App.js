@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { fetchAllTech } from '../../Utils/api-calls';
 import { filterTechData } from '../../Utils/cleaning-function';
 import TechArea from '../TechArea/TechArea.js';
-import { Route, Link } from 'react-router-dom';
+import Header from '../Header/Header.js'
+import { Route } from 'react-router-dom';
 
 class App extends Component {
 
@@ -28,24 +29,34 @@ class App extends Component {
   render () {
     return (
     <main className="App">
-    <Link to="/learning_list">
-      <h1>Learning List</h1>
-    </Link>
     <Route exact path ='/'
           render={() => (
-            <TechArea learningList={this.state.learningList}
-                      removeFromList={this.removeFromLearningList}
-                      addToList={this.addToLearningList}
-                      techs={this.state.techs}
-                      playMovie={this.playMovie}/>
+            <Header/>
+            //home page component
+          )}
+        />
+    <Route exact path ='/tech_list'
+          render={() => (
+            <div>
+              <Header/>
+              <TechArea learningList={this.state.learningList}
+                        removeFromList={this.removeFromLearningList}
+                        addToList={this.addToLearningList}
+                        techs={this.state.techs}
+                        playMovie={this.playMovie}/>
+            </div>
           )}
         />
     <Route exact path ='/learning_list'
           render={() => (
-            <TechArea learningList={this.state.learningList}
-                      removeFromList={this.removeFromLearningList}
-                      techs={this.state.learningList}
-                      playMovie={this.playMovie}/>
+            <div>
+              <Header/>
+              <h1>Learning List</h1>
+              <TechArea learningList={this.state.learningList}
+                        removeFromList={this.removeFromLearningList}
+                        techs={this.state.learningList}
+                        playMovie={this.playMovie}/>
+            </div>
          )}
         />
     </main>

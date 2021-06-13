@@ -1,0 +1,58 @@
+.logo {
+  height: 8vw;
+  width: 8vw;
+}
+
+.header {
+  background-color: #121730;
+}
+
+.link-container {
+  margin-left: 3vw;
+  width: 15vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white
+}
+
+@media screen and (min-width: 965px) and (max-width: 1154px) {
+  .link-container {
+    width: 18vw;
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 964px) {
+  .link-container {
+    width: 21vw;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 839px) {
+  .link-container {
+    width: 21vw;
+  }
+
+  .nav-link {
+    font-size: 1.7vw;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .link-container {
+    width: 26vw;
+    margin-left: 5vw;
+  }
+
+  .nav-link {
+    font-size: 2.1vw;
+  }
+}
+.logo {
+  height: 11vw;
+  width: 11vw;
+}

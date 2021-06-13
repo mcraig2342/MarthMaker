@@ -8,6 +8,10 @@
                2.5px 2.5px 15px 5px grey;
 }
 
+.tech-name {
+  font-size: 2vw;
+}
+
 .video-frame {
   height: 15vw;
   width: 20vw;
@@ -15,5 +19,187 @@
 
 .tech-gif {
   height: 15vw;
-  width: 20vw;  
+  width: 20vw;
+}
+
+.list-button {
+  background-color: #121730;
+  color: white;
+  font-size: 1vw;
+  border-radius: 2px;
+  border-style: inset;
+  width: 15vw;
+  height:2vw;
+}
+
+.description,
+.inputs {
+  font-size: 1vw;
+}
+
+@media screen and (min-width: 1155px) and (max-width: 1300px) {
+  .card {
+    height: 35vw;
+  }
+
+  .description,
+  .inputs {
+    font-size: 1.4vw;
+  }
+
+  .video-frame {
+    height: 18vw;
+    width: 22vw;
+  }
+
+  .tech-gif {
+    height: 18vw;
+    width: 22vw;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 1154px) {
+  .card {
+    height: 45vw;
+  }
+
+  .description,
+  .inputs {
+    font-size: 1.8vw;
+  }
+
+  .video-frame {
+    height: 22vw;
+    width: 26vw;
+  }
+
+  .tech-gif {
+    height: 22vw;
+    width: 26vw;
+  }
+
+  .list-button {
+    font-size: 1.5vw;
+    width: 20vw;
+    height:3.5vw;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 574px) {
+  .card {
+    height: 55vw;
+  }
+
+  .description,
+  .inputs {
+    font-size: 2vw;
+  }
+
+  .video-frame {
+    height: 27vw;
+    width: 31vw;
+  }
+
+  .tech-gif {
+    height: 27vw;
+    width: 31vw;
+  }
+
+  .list-button {
+    font-size: 1.7vw;
+    width: 23vw;
+    height:3.9vw;
+  }
+}
+
+@media screen and (min-width: 395px) and (max-width: 499px) {
+  .card {
+    height: 85vw;
+  }
+
+  .description,
+  .inputs {
+    font-size: 2.8vw;
+  }
+
+  .video-frame {
+    height: 35vw;
+    width: 42vw;
+  }
+
+  .tech-gif {
+    height: 35vw;
+    width: 42vw;
+  }
+
+  .list-button {
+    margin-top: 10vw;
+    font-size: 2.6vw;
+    width: 31vw;
+    height:4.9vw;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 394px) {
+  .card {
+    height: 120vw;
+  }
+
+  .description,
+  .inputs {
+    font-size: 3.4vw;
+  }
+
+  .video-frame {
+    height: 42vw;
+    width: 47vw;
+  }
+
+  .tech-gif {
+    height: 42vw;
+    width: 47vw;
+  }
+
+  .list-button {
+    margin-top: 10vw;
+    font-size: 2.8vw;
+    width: 37vw;
+    height:6vw;
+  }
+
+  .tech-name {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .card {
+    height: 120vw;
+  }
+
+  .description,
+  .inputs {
+    font-size: 3.4vw;
+  }
+
+  .video-frame {
+    height: 45vw;
+    width: 51vw;
+  }
+
+  .tech-gif {
+    height: 45vw;
+    width: 51vw;
+  }
+
+  .list-button {
+    margin-top: 10vw;
+    font-size: 2.8vw;
+    width: 37vw;
+    height:6vw;
+  }
+
+  .tech-name {
+    font-size: 5vw;
+  }
 }
