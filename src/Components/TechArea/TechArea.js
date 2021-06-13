@@ -1,5 +1,6 @@
 import { React } from 'react';
 import TechCard from '../TechCard/TechCard.js';
+import PropTypes from 'prop-types';
 import './TechArea.css';
 let inLearningList;
 
@@ -34,5 +35,13 @@ const TechArea = ({ learningList, removeFromList, addToList, techs, playMovie })
     </div>
   )
 }
+
+TechArea.propTypes = {
+  learningList: PropTypes.array.isRequired,
+  removeFromList: PropTypes.func.isRequired,
+  addToList: PropTypes.func,
+  techs: PropTypes.array.isRequired,
+  playMovie: PropTypes.func.isRequired,
+};
 
 export default TechArea;
