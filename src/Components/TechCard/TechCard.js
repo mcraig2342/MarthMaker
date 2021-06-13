@@ -11,19 +11,21 @@ const TechCard =({ inputs, description, inLearningList, removeFromList, addToLis
 if(!inLearningList) {
   return (
     <div className='card' id={id}>
-      <h1>{techName}</h1>
+      <h1 className='tech-name'>{techName}</h1>
       <video onMouseOver={playMovie} className="video-frame" id="video-skinnycorrupthake" alt="GIF"  playsInline="">
         <source className='tech-gif' src={gif} type="video/mp4"/>
       </video>
-      <p className='description'>{description}</p>
-      <p className='inputs'>{inputs}</p>
+      <div className='info-container'>
+        <p className='description'>{description}</p>
+        <p className='inputs'>{inputs}</p>
+      </div>
       <button className='list-button' id={id} onClick={addToList}>Add to learning list</button>
     </div>
   )
 } else {
   return (
     <div className='card' id={id}>
-      <h1>{techName}</h1>
+      <h1 className='tech-name'>{techName}</h1>
       <video onMouseOver={playMovie} className="video-frame" id="video-skinnycorrupthake" alt="GIF"  playsInline="">
         <source className='tech-gif' src={gif} type="video/mp4"/>
       </video>
