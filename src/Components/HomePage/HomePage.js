@@ -5,8 +5,8 @@ const HomePage = () => {
 
   return(
       <div className='home-container'>
-        <h1>Welcome to Marth Maker</h1>
-        <p>
+        <h1 className='greeting'>Welcome to Marth Maker</h1>
+        <p className='intro'>
         Marth Maker is a tech guide that will help you improve
         your tech-skill and make yourself a better Marth player. The tech
         page has 31 beginner, intermediate, and advanced tech skills that
