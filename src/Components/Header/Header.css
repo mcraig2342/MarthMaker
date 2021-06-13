@@ -1,0 +1,22 @@
+.logo {
+  height: 8vw;
+  width: 8vw;
+  margin-left: 3vw;
+}
+
+.header {
+  background-color: #121730;
+}
+
+.link-container {
+  margin-left: 3vw;
+  width: 15vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white
+}
