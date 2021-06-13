@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './TechCard.css';
 
 const playMovie = (event) => {
@@ -30,5 +31,14 @@ if(!inLearningList) {
 
   }
 }
+
+TechCard.propTypes = {
+  inLearningList: PropTypes.bool.isRequired,
+  removeFromList: PropTypes.func.isRequired,
+  addToList: PropTypes.func.isRequired,
+  techName: PropTypes.string.isRequired,
+  gif: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
+};
 
 export default TechCard;
