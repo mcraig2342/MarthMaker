@@ -19,6 +19,8 @@ const TechArea = ({ learningList, removeFromList, addToList, techs, playMovie })
           < TechCard
       techName={tech.tech}
       gif={`https://thumbs.gfycat.com/${tech.gifs[0].url}-mobile.mp4`}
+      description={tech.description}
+      inputs={tech.inputs}
       id={tech.id}
       key={tech.id}
       playMovie={playMovie}
