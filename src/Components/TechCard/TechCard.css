@@ -15,5 +15,14 @@
 
 .tech-gif {
   height: 15vw;
-  width: 20vw;  
+  width: 20vw;
+}
+
+.list-button {
+  background-color: #121730;
+  color: white;
+  border-radius: 2px;
+  border-style: inset;
+  width: 15vw;
+  height:2vw;
 }
