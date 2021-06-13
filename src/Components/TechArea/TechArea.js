@@ -9,7 +9,6 @@ const TechArea = ({ learningList, removeFromList, addToList, techs, playMovie })
   const displayTech = () => {
     const learningId = learningList.map(tech => tech.id)
     return techs.map(tech => {
-      if(tech.gifs.length){
         if(learningId.includes(tech.id)) {
            inLearningList = true;
         } else {
@@ -27,9 +26,6 @@ const TechArea = ({ learningList, removeFromList, addToList, techs, playMovie })
       inLearningList={inLearningList}
       />
         )
-      } else {
-        return null
-      }
     })
   }
   return (
