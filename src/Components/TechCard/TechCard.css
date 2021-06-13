@@ -8,6 +8,10 @@
                2.5px 2.5px 15px 5px grey;
 }
 
+.tech-name {
+  font-size: 2vw;
+}
+
 .video-frame {
   height: 15vw;
   width: 20vw;
@@ -21,8 +25,35 @@
 .list-button {
   background-color: #121730;
   color: white;
+  font-size: 1vw;
   border-radius: 2px;
   border-style: inset;
   width: 15vw;
   height:2vw;
+}
+
+.description,
+.inputs {
+  font-size: 1vw;
+}
+
+@media screen and (min-width: 1155px) and (max-width: 1300px) {
+  .card {
+    height: 35vw;
+  }
+
+  .description,
+  .inputs {
+    font-size: 1.4vw;
+  }
+
+  .video-frame {
+    height: 18vw;
+    width: 22vw;
+  }
+
+  .tech-gif {
+    height: 18vw;
+    width: 22vw;
+  }
 }
