@@ -51,6 +51,7 @@ class App extends Component {
           render={() => (
             <div>
               <Header/>
+              <h1>Learning List</h1>
               <TechArea learningList={this.state.learningList}
                         removeFromList={this.removeFromLearningList}
                         techs={this.state.learningList}
