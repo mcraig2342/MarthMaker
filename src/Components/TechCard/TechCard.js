@@ -6,7 +6,7 @@ const playMovie = (event) => {
   event.target.play();
 }
 
-const TechCard =({ inLearningList, removeFromList, addToList, techName, gif, id }) => {
+const TechCard =({ inputs, description, inLearningList, removeFromList, addToList, techName, gif, id }) => {
 
 if(!inLearningList) {
   return (
@@ -15,7 +15,9 @@ if(!inLearningList) {
       <video onMouseOver={playMovie} className="video-frame" id="video-skinnycorrupthake" alt="GIF"  playsInline="">
         <source className='tech-gif' src={gif} type="video/mp4"/>
       </video>
-      <button id={id} onClick={addToList}>Add to learning list</button>
+      <p className='description'>{description}</p>
+      <p className='inputs'>{inputs}</p>
+      <button className='list-button' id={id} onClick={addToList}>Add to learning list</button>
     </div>
   )
 } else {
@@ -25,7 +27,9 @@ if(!inLearningList) {
       <video onMouseOver={playMovie} className="video-frame" id="video-skinnycorrupthake" alt="GIF"  playsInline="">
         <source className='tech-gif' src={gif} type="video/mp4"/>
       </video>
-      <button id={id} onClick={removeFromList}>Remove from learning list</button>
+      <p className='description'>{description}</p>
+      <p className='inputs'>{inputs}</p>
+      <button className='list-button'id={id} onClick={removeFromList}>Remove from learning list</button>
     </div>
   )
 
