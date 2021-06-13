@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import { fetchAllTech } from '../../Utils/api-calls';
+import { filterTechData } from '../../Utils/cleaning-function';
 import TechArea from '../TechArea/TechArea.js';
 import { Route, Link } from 'react-router-dom';
 
@@ -18,7 +19,8 @@ class App extends Component {
   componentDidMount = () => {
     fetchAllTech()
     .then(techData => {
-      this.setState({ techs: techData })
+      const allTechData = filterTechData(techData);
+      this.setState({ techs: allTechData })
     })
     .catch(error => this.setState({ error: 'Tech not found!'}))
   }
