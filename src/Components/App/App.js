@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { fetchAllTech } from '../../Utils/api-calls';
 import { filterTechData } from '../../Utils/cleaning-function';
 import TechArea from '../TechArea/TechArea.js';
-import Header from '../Header/Header.js'
+import Header from '../Header/Header.js';
+import HomePage from '../HomePage/HomePage.js';
 import { Route } from 'react-router-dom';
 
 class App extends Component {
@@ -31,8 +32,10 @@ class App extends Component {
     <main className="App">
     <Route exact path ='/'
           render={() => (
-            <Header/>
-            //home page component
+            <div>
+              <Header/>
+              <HomePage/>
+           </div>
           )}
         />
     <Route exact path ='/tech_list'
