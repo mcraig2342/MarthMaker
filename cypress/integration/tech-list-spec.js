@@ -18,4 +18,9 @@ describe('Tech list elements', () => {
         .get('[data-cy=list-button]').should('contain', 'Add')
   });
 
+  it('Should render the correct button after being added to list', () => {
+      cy.get('[data-cy=list-button]').click()
+        .get('[data-cy=list-button]').should('contain', 'Remove')
+  });
+
 });
