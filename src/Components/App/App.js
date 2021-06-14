@@ -54,18 +54,18 @@ class App extends Component {
               <h1 className='list-label'>Tech List</h1>
               <TechArea techs={this.state.techs}
                         renderItem={tech => (
-           <TechCard
-           techName={tech.tech}
-           gif={`https://thumbs.gfycat.com/${tech.gifs[0].url}-mobile.mp4`}
-           description={tech.description}
-           inputs={tech.inputs}
-           id={tech.id}
-           key={tech.id}
-           playMovie={this.playMovie}
-           addToList={this.addToLearningList}
-           removeFromList={this.removeFromLearningList}
-           inLearningList={this.checkLearningList(tech.id)}
-           />
+                           <TechCard
+                           techName={tech.tech}
+                           gif={`https://thumbs.gfycat.com/${tech.gifs[0].url}-mobile.mp4`}
+                           description={tech.description}
+                           inputs={tech.inputs}
+                           id={tech.id}
+                           key={tech.id}
+                           playMovie={this.playMovie}
+                           addToList={this.addToLearningList}
+                           removeFromList={this.removeFromLearningList}
+                           inLearningList={this.checkLearningList(tech.id)}
+                           />
          )}/>
             </div>
           )}
@@ -84,19 +84,19 @@ class App extends Component {
               <h1 className='list-label'>Learning List</h1>
               <TechArea techs={this.state.learningList}
                         renderItem={tech => (
-           <TechCard
-           techName={tech.tech}
-           gif={`https://thumbs.gfycat.com/${tech.gifs[0].url}-mobile.mp4`}
-           description={tech.description}
-           inputs={tech.inputs}
-           id={tech.id}
-           key={tech.id}
-           playMovie={this.playMovie}
-           addToList={this.addToLearningList}
-           removeFromList={this.removeFromLearningList}
-           inLearningList={this.checkLearningList(tech.id)}
-           />
-         )}/>
+                             <TechCard
+                             techName={tech.tech}
+                             gif={`https://thumbs.gfycat.com/${tech.gifs[0].url}-mobile.mp4`}
+                             description={tech.description}
+                             inputs={tech.inputs}
+                             id={tech.id}
+                             key={tech.id}
+                             playMovie={this.playMovie}
+                             addToList={this.addToLearningList}
+                             removeFromList={this.removeFromLearningList}
+                             inLearningList={this.checkLearningList(tech.id)}
+                             />
+              )}/>
             </div>
          )}
         />
