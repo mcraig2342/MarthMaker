@@ -23,5 +23,8 @@ describe('Adding and removing comics from reading list', () => {
      cy.get('[data-cy=tech-link]').click().url().should('eq', 'http://localhost:3000/tech_list');
   });
 
+  it('Should be able to navigate to the learning list from the home page', () => {
+     cy.get('[data-cy=learning-link]').click().url().should('eq', 'http://localhost:3000/learning_list');
+  });
 
 });
