@@ -1,4 +1,4 @@
-describe('Adding and removing comics from reading list', () => {
+describe('Home page elements', () => {
 
   beforeEach(() => {
     cy.stub()
