@@ -41,10 +41,12 @@ if(!inLearningList) {
 TechCard.propTypes = {
   inLearningList: PropTypes.bool.isRequired,
   removeFromList: PropTypes.func.isRequired,
-  addToList: PropTypes.func.isRequired,
+  addToList: PropTypes.func,
   techName: PropTypes.string.isRequired,
   gif: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  inputs: PropTypes.string,
 };
 
 export default TechCard;
