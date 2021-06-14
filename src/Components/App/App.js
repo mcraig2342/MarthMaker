@@ -5,7 +5,7 @@ import { filterTechData } from '../../Utils/cleaning-function';
 import TechArea from '../TechArea/TechArea.js';
 import Header from '../Header/Header.js';
 import HomePage from '../HomePage/HomePage.js';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
 
@@ -31,6 +31,7 @@ class App extends Component {
   render () {
     return (
     <main className="App">
+    <Switch>
     <Route exact path ='/'
           render={() => (
             <div>
@@ -39,7 +40,7 @@ class App extends Component {
            </div>
           )}
         />
-    <Route exact path ='/tech_list'
+    <Route path ='/tech_list'
           render={() => (
            this.state.error.length ?
            <div>
@@ -58,7 +59,7 @@ class App extends Component {
             </div>
           )}
         />
-    <Route exact path ='/learning_list'
+    <Route path ='/learning_list'
           render={() => (
            !this.state.learningList.length ?
               <div>
@@ -77,6 +78,15 @@ class App extends Component {
             </div>
          )}
         />
+        <Route path ='*'
+              render={() => (
+                <div>
+                  <Header/>
+                  <HomePage/>
+               </div>
+              )}
+            />
+    </Switch>
     </main>
   )
   }
