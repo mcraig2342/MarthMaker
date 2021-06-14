@@ -28,3 +28,13 @@ describe('Home page elements', () => {
   });
 
 });
+
+describe('Home page sad path', () => {
+
+  it('Should bring the user to the home page if an invalid url path is entered', () => {
+    cy.stub()
+      .visit('http://localhost:3000/yolo')
+      .get('h1').should('contain', 'Welcome to Marth Maker')
+  });
+
+});
