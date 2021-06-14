@@ -10,28 +10,30 @@ const TechCard =({ inputs, description, inLearningList, removeFromList, addToLis
 
 if(!inLearningList) {
   return (
-    <div className='card' id={id}>
-      <h1 className='tech-name'>{techName}</h1>
-      <video onMouseOver={playMovie} className="video-frame" id="video-skinnycorrupthake" alt="GIF"  playsInline="">
+    <div data-cy='tech-card' className='card' id={id}>
+      <h1 data-cy='tech-name' className='tech-name'>{techName}</h1>
+      <video data-cy='gif' onMouseOver={playMovie} className="video-frame" id="video-skinnycorrupthake" alt="GIF"  playsInline="">
         <source className='tech-gif' src={gif} type="video/mp4"/>
       </video>
-      <div className='info-container'>
-        <p className='description'>{description}</p>
+      <div data-cy='info' className='info-container'>
+        <p data-cy='description' className='description'>{description}</p>
         <p className='inputs'>{inputs}</p>
       </div>
-      <button className='list-button' id={id} onClick={addToList}>Add to learning list</button>
+      <button data-cy='list-button' className='list-button' id={id} onClick={addToList}>Add to learning list</button>
     </div>
   )
 } else {
   return (
-    <div className='card' id={id}>
-      <h1 className='tech-name'>{techName}</h1>
-      <video onMouseOver={playMovie} className="video-frame" id="video-skinnycorrupthake" alt="GIF"  playsInline="">
+    <div data-cy='tech-card' className='card' id={id}>
+      <h1 data-cy='tech-name' className='tech-name'>{techName}</h1>
+      <video data-cy='gif' onMouseOver={playMovie} className="video-frame" id="video-skinnycorrupthake" alt="GIF"  playsInline="">
         <source className='tech-gif' src={gif} type="video/mp4"/>
       </video>
-      <p className='description'>{description}</p>
-      <p className='inputs'>{inputs}</p>
-      <button className='list-button'id={id} onClick={removeFromList}>Remove from learning list</button>
+      <div data-cy='info' className='info-container'>
+        <p data-cy='description' className='description'>{description}</p>
+        <p className='inputs'>{inputs}</p>
+      </div>
+      <button data-cy='list-button' className='list-button'id={id} onClick={removeFromList}>Remove from learning list</button>
     </div>
   )
 

@@ -7,13 +7,15 @@ const Header = () => {
 
   return(
     <nav className='header'>
-      <img className='logo' src={logo} alt='Marth maker logo'/>
+      <NavLink className='nav-link' to="/">
+        <img data-cy='logo' className='logo' src={logo} alt='Marth maker logo'/>
+      </NavLink>
       <div className='link-container'>
         <NavLink className='nav-link' to="/tech_list">
-          <p>TECH</p>
+          <p data-cy='tech-link' >TECH</p>
         </NavLink>
         <NavLink className='nav-link' to="/learning_list">
-          <p>LEARNING LIST</p>
+          <p data-cy='learning-link'>LEARNING LIST</p>
         </NavLink>
       </div>
     </nav>

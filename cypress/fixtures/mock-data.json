@@ -1,0 +1,61 @@
+[
+{
+"id": "1",
+"tech": "Wave Dash",
+"description": "A wavedash is a technique in Super Smash Bros. Melee that is performed by air dodging diagonally into the ground, causing the character to slide a short distance.",
+"smashwiki": "http://www.ssbwiki.com/wavedash",
+"inputs": "(Jump)->immediate (Diagonal Air Dodge)",
+"created_at": "-0001-11-30 00:00:00",
+"updated_at": "-0001-11-30 00:00:00",
+"gifs": [
+{
+"id": "512",
+"typeid": "2",
+"dataid": "1",
+"source": "http://www.reddit.com/r/smashbros/comments/1mlr3n/best_wavedashluigi_vs_worst_wavedashpeach/",
+"submittedby": "0",
+"url": "SkinnyCorruptHake",
+"description": "The longest wavedash (Luigi) and the shortest (Peach).",
+"score": "0",
+"created_at": "-0001-11-30 00:00:00",
+"updated_at": "-0001-11-30 00:00:00"
+},
+{
+"id": "513",
+"typeid": "2",
+"dataid": "1",
+"source": "",
+"submittedby": "0",
+"url": "ForkedGloomyHairstreakbutterfly",
+"description": "Continuous Wavedashes with Marth.",
+"score": "0",
+"created_at": "-0001-11-30 00:00:00",
+"updated_at": "-0001-11-30 00:00:00"
+},
+{
+"id": "1877",
+"typeid": "2",
+"dataid": "1",
+"source": "Kadano",
+"submittedby": "0",
+"url": "OldDistantAmericanwigeon",
+"description": "Sheik punishes Falco's shield pressure with a wavedash out of shield followed by a dash attack",
+"score": "0",
+"created_at": "-0001-11-30 00:00:00",
+"updated_at": "-0001-11-30 00:00:00"
+},
+{
+"id": "1893",
+"typeid": "2",
+"dataid": "1",
+"source": "Kadano",
+"submittedby": "0",
+"url": "SmugOilyAmericanquarterhorse",
+"description": "Captain Falcon does a frame-perfect ledgedash (wavedash from the ledge) and pivot edgehogs",
+"score": "0",
+"created_at": "-0001-11-30 00:00:00",
+"updated_at": "-0001-11-30 00:00:00"
+}
+]
+}
+]
