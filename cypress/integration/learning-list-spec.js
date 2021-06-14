@@ -50,7 +50,9 @@ describe('Learning list elements and functionality', () => {
      cy.get('[data-cy=tech-link]').click().url().should('eq', 'http://localhost:3000/tech_list');
   });
 
-
+  it('Should be able to navigate to the home page from the learning list page', () => {
+     cy.get('[data-cy=logo]').click().url().should('eq', 'http://localhost:3000/');
+  });
 
 });
 
