@@ -52,9 +52,15 @@ class App extends Component {
         />
     <Route exact path ='/learning_list'
           render={() => (
+           !this.state.learningList.length ?
+              <div>
+                <Header/>
+                <h3 className='list-warning'>No tech in learning list!</h3>
+              </div>
+             :
             <div>
               <Header/>
-              <h1>Learning List</h1>
+              <h1 className='list-label'>Learning List</h1>
               <TechArea learningList={this.state.learningList}
                         removeFromList={this.removeFromLearningList}
                         techs={this.state.learningList}
