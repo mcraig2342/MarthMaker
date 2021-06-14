@@ -1,5 +1,7 @@
 ## Marth Maker
 
+### Link to repo:  https://github.com/mcraig2342/MarthMaker 
+
 ### Table of Contents
 * [Description](#description)
 * [Setup](#setup)
@@ -83,5 +85,6 @@ The biggest win for me on this project was being able to find a working melee AP
 interested in. My biggest technical win was adding a route that takes any invalid url path and displays the home page.
 
 #### Challenges
-The biggest challenge was trying to wright thorough cypress tests that check for sad paths as well as happy. 
+The biggest challenge was trying to wright thorough cypress tests that check for sad paths as well as happy, and implementing the render item prop to work around
+prop drilling. 
 
