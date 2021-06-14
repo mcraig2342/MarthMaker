@@ -25,6 +25,22 @@ describe('Learning list elements and functionality', () => {
       .get('[data-cy=list-button]').should('contain', 'Remove')
   });
 
+  it('Should be able to remove a card from the list from tech page', () => {
+    cy.get('[data-cy=list-button]').click()
+      .get('[data-cy=list-button]').click()
+      .get('[data-cy=learning-link]').click().url().should('eq', 'http://localhost:3000/learning_list')
+      .get('h3').should('contain', 'No tech in learning list, add some from the tech page!');
+
+  });
+
+  it('Should be able to remove a card from the list from learning list page', () => {
+    cy.get('[data-cy=list-button]').click()
+      .get('[data-cy=learning-link]').click().url().should('eq', 'http://localhost:3000/learning_list')
+      .get('[data-cy=list-button]').click()
+      .get('h3').should('contain', 'No tech in learning list, add some from the tech page!');
+
+  });
+
 });
 
 describe('Learning sad path', () => {
