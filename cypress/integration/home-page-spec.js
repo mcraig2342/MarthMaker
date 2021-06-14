@@ -14,6 +14,9 @@ describe('Adding and removing comics from reading list', () => {
      cy.get('p').should('contain', 'Marth Maker is a tech guide that will help you improve your tech-skill')
   });
 
-
+  it('Should display header on home page', () => {
+     cy.get('nav').should('contain', 'TECH')
+     cy.get('nav').should('contain', 'LEARNING ')
+  });
 
 });
