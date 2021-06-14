@@ -16,7 +16,12 @@ describe('Adding and removing comics from reading list', () => {
 
   it('Should display header on home page', () => {
      cy.get('nav').should('contain', 'TECH')
-     cy.get('nav').should('contain', 'LEARNING ')
+     cy.get('nav').should('contain', 'LEARNING LIST')
   });
+
+  it('Should be able to navigate to the tech list from the home page', () => {
+     cy.get('[data-cy=tech-link]').click().url().should('eq', 'http://localhost:3000/tech_list');
+  });
+
 
 });
