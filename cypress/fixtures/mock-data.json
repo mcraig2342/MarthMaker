@@ -57,28 +57,5 @@
 "updated_at": "-0001-11-30 00:00:00"
 }
 ]
-},
-{
-"id": "2",
-"tech": "Multi Shine",
-"description": "A double shine (or multi shine, triple shine, etc.) is the repeated use of Reflector as an attack by either Fox or Falco. It is performed by jump-cancelling a Reflector and using a second Reflector just after leaving the ground, timed so that Fox or Falco will quickly land and allow the pattern to be repeated.",
-"smashwiki": "http://www.ssbwiki.com/Double_shine",
-"inputs": "(Down + B) , (Jump) , (Down + B)",
-"created_at": "-0001-11-30 00:00:00",
-"updated_at": "-0001-11-30 00:00:00",
-"gifs": [
-{
-"id": "515",
-"typeid": "2",
-"dataid": "2",
-"source": "",
-"submittedby": "0",
-"url": "SeveralCompassionateBlackwidowspider",
-"description": "A series of frame-perfect multi shines at 1/4 speed.",
-"score": "0",
-"created_at": "-0001-11-30 00:00:00",
-"updated_at": "-0001-11-30 00:00:00"
-}
-]
 }
 ]
