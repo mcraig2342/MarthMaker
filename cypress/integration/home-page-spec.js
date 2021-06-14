@@ -10,6 +10,10 @@ describe('Adding and removing comics from reading list', () => {
      cy.get('h1').should('contain', 'Welcome to Marth Maker')
   });
 
+  it('Should show description on page load', () => {
+     cy.get('p').should('contain', 'Marth Maker is a tech guide that will help you improve your tech-skill')
+  });
+
 
 
 });
