@@ -42,6 +42,7 @@ class App extends Component {
           render={() => (
             <div>
               <Header/>
+              <h1 className='list-label'>Tech List</h1>
               <TechArea learningList={this.state.learningList}
                         removeFromList={this.removeFromLearningList}
                         addToList={this.addToLearningList}
@@ -55,7 +56,8 @@ class App extends Component {
            !this.state.learningList.length ?
               <div>
                 <Header/>
-                <h3 className='list-warning'>No tech in learning list!</h3>
+                <h3 className='list-warning'>No tech in learning list,
+                                             add some from the tech page!</h3>
               </div>
              :
             <div>
