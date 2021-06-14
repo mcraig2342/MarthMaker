@@ -1,12 +1,9 @@
-import React from 'react';
+import { React } from 'react';
 import PropTypes from 'prop-types';
 import './TechCard.css';
 
-const playMovie = (event) => {
-  event.target.play();
-}
 
-const TechCard =({ inputs, description, inLearningList, removeFromList, addToList, techName, gif, id }) => {
+const TechCard =({ inputs, description, inLearningList, removeFromList, addToList, techName, gif, id, playMovie }) => {
 
 if(!inLearningList) {
   return (
@@ -43,7 +40,8 @@ if(!inLearningList) {
 TechCard.propTypes = {
   inLearningList: PropTypes.bool.isRequired,
   removeFromList: PropTypes.func.isRequired,
-  addToList: PropTypes.func,
+  addToList: PropTypes.func.isRequired,
+  playMovie: PropTypes.func.isRequired,
   techName: PropTypes.string.isRequired,
   gif: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
