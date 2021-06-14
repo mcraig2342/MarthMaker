@@ -59,7 +59,9 @@ describe('Learning list elements and functionality', () => {
 describe('Learning sad path', () => {
 
   it('Should display a warning if nothing has been added to the list', () => {
-      cy.get('[data-cy=learning-link]').click().url().should('eq', 'http://localhost:3000/learning_list')
+    cy.stub()
+      .visit('http://localhost:3000/tech_list')
+      .get('[data-cy=learning-link]').click().url().should('eq', 'http://localhost:3000/learning_list')
       .get('h3').should('contain', 'No tech in learning list, add some from the tech page!');
   });
 
