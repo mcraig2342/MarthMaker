@@ -46,6 +46,9 @@ describe('Learning list elements and functionality', () => {
      cy.get('nav').should('contain', 'LEARNING LIST')
   });
 
+  it('Should be able to navigate to the tech list from the learning list page', () => {
+     cy.get('[data-cy=tech-link]').click().url().should('eq', 'http://localhost:3000/tech_list');
+  });
 
 
 
