@@ -7,7 +7,9 @@ const Header = () => {
 
   return(
     <nav className='header'>
-      <img className='logo' src={logo} alt='Marth maker logo'/>
+      <NavLink className='nav-link' to="/">
+        <img className='logo' src={logo} alt='Marth maker logo'/>
+      </NavLink>
       <div className='link-container'>
         <NavLink className='nav-link' to="/tech_list">
           <p data-cy='tech-link' >TECH</p>
