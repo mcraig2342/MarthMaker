@@ -23,4 +23,9 @@ describe('Tech list elements', () => {
         .get('[data-cy=list-button]').should('contain', 'Remove')
   });
 
+  it('Should display header on tech page', () => {
+     cy.get('nav').should('contain', 'TECH')
+     cy.get('nav').should('contain', 'LEARNING LIST')
+  });
+
 });
