@@ -24,7 +24,8 @@ class App extends Component {
       const allTechData = filterTechData(techData);
       this.setState({ techs: allTechData })
     })
-    .catch(error => this.setState({ error: 'Tech not found!'}))
+    .catch(error => this.setState({ error: 'Tech not found!'})
+    )
   }
 
   render () {
@@ -40,7 +41,13 @@ class App extends Component {
         />
     <Route exact path ='/tech_list'
           render={() => (
-            <div>
+           this.state.error.length ?
+           <div>
+             <Header/>
+             <h3 className='list-warning'>Sorry, we seem to have misplaced our skills,
+                                          please check back later</h3>
+           </div>
+          : <div>
               <Header/>
               <h1 className='list-label'>Tech List</h1>
               <TechArea learningList={this.state.learningList}
@@ -86,7 +93,7 @@ class App extends Component {
   }
 }
 
-removeFromLearningList = (event) => {
+  removeFromLearningList = (event) => {
    const filteredList = this.state.learningList.filter(tech => tech.id !== event.target.id);
    this.setState({ learningList: filteredList });
  }
