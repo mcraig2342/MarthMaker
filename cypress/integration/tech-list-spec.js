@@ -32,4 +32,22 @@ describe('Tech list elements', () => {
      cy.get('[data-cy=learning-link]').click().url().should('eq', 'http://localhost:3000/learning_list');
   });
 
+  it('Should be able to navigate to the home page from the tech page', () => {
+     cy.get('[data-cy=logo]').click().url().should('eq', 'http://localhost:3000/');
+  });
+
+});
+
+describe('Tech sad path', () => {
+
+  it('Should display a warning if data cannot be fetched', () => {
+    cy.intercept('http://localhost:3000/api/techs/all', {
+      statusCode: 404,
+      delay: 100,
+      body: null
+    })
+      .visit('http://localhost:3000/tech_list')
+      .get('h3').should('contain', 'Sorry, we seem to have misplaced our skills, please check back later');
+  });
+
 });
