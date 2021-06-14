@@ -28,4 +28,8 @@ describe('Tech list elements', () => {
      cy.get('nav').should('contain', 'LEARNING LIST')
   });
 
+  it('Should be able to navigate to the learning list from the tech page', () => {
+     cy.get('[data-cy=learning-link]').click().url().should('eq', 'http://localhost:3000/learning_list');
+  });
+
 });
