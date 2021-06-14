@@ -41,6 +41,14 @@ describe('Learning list elements and functionality', () => {
 
   });
 
+  it('Should display header on learning list page', () => {
+     cy.get('nav').should('contain', 'TECH')
+     cy.get('nav').should('contain', 'LEARNING LIST')
+  });
+
+
+
+
 });
 
 describe('Learning sad path', () => {
