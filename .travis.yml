@@ -1,0 +1,7 @@
+you how to dismiss the emails. Here is what we need to add to our .travis.yml file:
+
+language: node_js
+node_js:
+  - "node"
+notifications:
+  email: false
